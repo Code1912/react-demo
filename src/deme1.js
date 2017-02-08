@@ -8,13 +8,17 @@ class Demo1 extends  React.Component{
     constructor(props) {
         super(props);
         this.state = {text: props.text||'',title:"title"};
+        this.index=0;
     }
     onChangeTextClick(){
         if(!this){
             return;
         }
-
-        this.setState( {text:"text  changed"})
+         // you can callback or not callback
+        //this.setState( {text:"text  changed"})
+        this.setState( {text:"text  changed"},function () {
+            console.log("callback now",this.index++)
+        })
     }
 
     onTextChange(e){
