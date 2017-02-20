@@ -3,7 +3,7 @@
  */
 import  React from "react"
 
-class Demo1 extends  React.Component{
+class StateDemo extends  React.Component{
     constructor(props) {
         super(props);
         this.state = {text: props.text||'',title:"Base Demo"};
@@ -39,4 +39,4 @@ class Demo1 extends  React.Component{
     }
 }
 
-export default Demo1
+export default StateDemo

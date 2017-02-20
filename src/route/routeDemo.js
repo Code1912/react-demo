@@ -8,11 +8,11 @@ class RouteDemo extends  React.Component{
         super(props);
         this.paths = [
             {
-                path: "/routedemo/route1",
+                path: "/route/route1",
                 text: "None params route"
             },
             {
-                path: "/routedemo/route2/11111",
+                path: "/route/route2/11111",
                 text: "Params route"
             }
         ];
