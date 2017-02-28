@@ -39,11 +39,19 @@ class Route1 extends  React.Component{
     constructor(props) {
         super(props);
     }
+    goToRoute2(){
+       /* this.props.router.transitionTo({
+            action:"REPLACE",//REPLACE,PUSH  ,POP ... etc
+            pathname:'/route/route2/232322',
+            search:""
+        });*/
+        this.props.router.replace("/route/route2/232322")
+    }
     render(){
         //<!-- <input value="" defaultValue='a'/>  同时写value 和default value 要报错   单独写value='ada' 也要报错 ，默认赋值得写defaultValue='abc'-->
         return    <div>
              No Params
-
+          <button onClick={this.goToRoute2.bind(this)}>Go Route2</button>
         </div>
     }
 }

@@ -12,6 +12,7 @@ import  {LifeCycleDemo} from "./lifecycle/lifecycle"
 //ReactDOM.render(<HelloWorld/>, document.getElementById("app"));
 import  StateDemo from "./state/state"
 import  HelloWorld from "./helloworld"
+import  List from "./list/list"
 // chrome react developer tools  download page:https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 // react developer tools introduction: https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html
 ReactDOM.render(
@@ -28,6 +29,7 @@ ReactDOM.render(
                     <Route   path={'route1'} component={Route1}  > </Route>
                     <Route   path={'route2/:id'} component={Route2}  > </Route>
                 </Route>
+                <Route path={'list'} component={List}/>
             </Route>
         </Router>
     </div>,

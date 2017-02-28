@@ -6,6 +6,7 @@ import {  Link } from 'react-router';
 class Menu extends  React.Component{
     constructor(props) {
         super(props);
+
     }
     render(){
         return <ul>
@@ -13,6 +14,7 @@ class Menu extends  React.Component{
             <li>  <Link to='/route' activeStyle={{color:'red'}} >Route Demo</Link></li>
             <li>  <Link to='/props' activeStyle={{color:'red'}} >Props Demo</Link></li>
             <li>  <Link to='/life' activeStyle={{color:'red'}} >LifeCycle Demo</Link></li>
+            <li>  <Link to='/list' activeStyle={{color:'red'}} >List Demo</Link></li>
         </ul>
     }
 }
