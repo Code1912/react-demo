@@ -3,16 +3,17 @@
  */
 import  React from "react"
 import Menu from "./menu"
-class App extends  React.Component{
+class App extends React.Component {
     constructor(props) {
         super(props);
     }
-    render(){
-        return <div>
-            <Menu/>
-            <hr/>
+    render() {
+        return
+        <div>
+            <Menu />
+            <hr />
             {this.props.children}
-            </div>
+        </div>
     }
 }
 export default  App;
