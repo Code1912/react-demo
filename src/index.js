@@ -3,6 +3,7 @@
  */
 import  React from "react"
 import  ReactDOM from "react-dom"
+
 import  App from "./app"
 import { Router, Route, hashHistory,browserHistory,Link } from 'react-router';
 import  {RouteDemo,Route1,Route2} from "./route/routeDemo"

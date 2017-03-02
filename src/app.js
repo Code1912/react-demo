@@ -8,12 +8,11 @@ class App extends React.Component {
         super(props);
     }
     render() {
-        return
-        <div>
-            <Menu />
-            <hr />
-            {this.props.children}
-        </div>
+        return <div>
+                    <Menu />
+                    <hr />
+                    {this.props.children}
+                </div>
     }
 }
 export default  App;
