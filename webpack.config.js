@@ -3,19 +3,13 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry:{
         index: './src/index.js',
-        vendor:'./src/vendor.js',
+        vendor:['react','react-dom','redux','react-router'],
     },
     output: {
         path: __dirname+"/dist",
         libraryTarget: 'umd',
         publicPath:"http://127.0.0.1:8080/",
         filename: '[name].js',
-    },
-    externals: {
-        "react": "react.umd",
-        "react-dom": "react-dom.umd",
-        //"./node_modules/react/react.js": "react-dom.umd",
-       // "./node_modules/react-dom/index.js": "react-dom.umd",
     },
     module: {
         loaders: [
@@ -43,6 +37,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+        }),
         new HtmlWebpackPlugin({
             title: 'React App',
             js: ["vendor.js", "index.js"],

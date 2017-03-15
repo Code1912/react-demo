@@ -45,18 +45,18 @@ class List extends  React.Component{
         return <div>
             <h2>List Demo</h2>
             <ul >
-                {this.list.map((item,index)=> {
-                    return <li onClick={this.list1Click.bind(this)} key={index}>{item}</li>
-                })}
+                {this.list.map((item,index)=>
+                     <li onClick={this.list1Click.bind(this)} key={index}>{item}</li>
+                )}
             </ul>
             <br/>
             <ul  >
-                {this.state.list2.map((item,index)=> {
-                    return <li   key={index}>
+                {this.state.list2.map((item,index)=>
+                     <li   key={index}>
                         {item.text} &nbsp;
                         <button className="btn btn-success btn-sm" onClick={this.list2Click.bind(this,item,index)}>Click</button>
                     </li>
-                })}
+                )}
             </ul>
         </div>
     }
