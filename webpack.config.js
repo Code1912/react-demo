@@ -3,7 +3,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry:{
         index: './src/index.js',
-        vendor:['react','react-dom','redux','react-router'],
+        vendor:['react','react-dom','redux','react-redux','react-router'],
     },
     output: {
         path: __dirname+"/dist",

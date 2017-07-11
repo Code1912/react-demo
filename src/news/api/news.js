@@ -3,7 +3,7 @@
  */
 
 const TIMEOUT=3000;
-const NEWS=[{
+const NEWSLIST=[{
     id:1,title:"title 1"
 },{
     id:2,title:"title 2"
@@ -19,20 +19,31 @@ const NEWS=[{
     id:7,title:"title 7"
 }];
 
-export  default {
-    getNews:()=>{
+export   class Service  {
+    static getNews(){
         return new Promise(function (resolve, reject) {
             setTimeout(()=>{
-                resolve(Object.assign([],NEWS));
+                resolve(Object.assign([],NEWSLIST));
             },TIMEOUT)
         })
-    },
-    removeNews:(id)=>{
+    }
+    static addNews(title){
         return new Promise(function (resolve, reject) {
             setTimeout(()=>{
-                let items=NEWS.filter(p=>p.id==id);
+                let id=Date.now();
+                let news={id:id,title:`${title} ${id}`};
+                NEWSLIST.push(news);
+                resolve(news);
+            },TIMEOUT)
+        })
+    }
+
+    static removeNews(id){
+        return new Promise(function (resolve, reject) {
+            setTimeout(()=>{
+                let items=NEWSLIST.filter(p=>p.id==id);
                 if(items.length>0){
-                    NEWS.splice( NEWS.indexOf(item[0]),1);
+                    NEWSLIST.splice( NEWSLIST.indexOf(item[0]),1);
                 }
                 resolve(true);
             },TIMEOUT)
