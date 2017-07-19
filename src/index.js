@@ -10,7 +10,7 @@ import { Router, Route, hashHistory,browserHistory,Link } from 'react-router';
 import  {RouteDemo,Route1,Route2} from "./route/routeDemo"
 import  {PropsDemo} from "./props/parent"
 import  {LifeCycleDemo} from "./lifecycle/lifecycle"
-import {NewsList} from "./news/components/newslist"
+import {NewsComponent} from "./news/components/newslist"
 //ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("app"));
 //ReactDOM.render(<HelloWorld/>, document.getElementById("app"));
 import  StateDemo from "./state/state"
@@ -30,7 +30,7 @@ ReactDOM.render( <Provider store={store}>
                     <Route   path={'route1'} component={Route1}  > </Route>
                     <Route   path={'route2/:id'} component={Route2}  > </Route>
                 </Route>
-                <Route path={'redux'} component={NewsList}/>
+                <Route path={'redux'} component={NewsComponent}/>
                 <Route path={'list'} component={List}/>
             </Route>
         </Router>

@@ -15,6 +15,7 @@ class Menu extends  React.Component{
             <li>  <Link to='/props' activeStyle={{color:'red'}} >Props Demo</Link></li>
             <li>  <Link to='/life' activeStyle={{color:'red'}} >LifeCycle Demo</Link></li>
             <li>  <Link to='/list' activeStyle={{color:'red'}} >List Demo</Link></li>
+            <li>  <Link to='/redux' activeStyle={{color:'red'}} >redux Demo</Link></li>
         </ul>
     }
 }

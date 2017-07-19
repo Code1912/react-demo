@@ -30,7 +30,7 @@ export   class Service  {
     static addNews(title){
         return new Promise(function (resolve, reject) {
             setTimeout(()=>{
-                let id=Date.now();
+                let id=list.length+1;
                 let news={id:id,title:`${title} ${id}`};
                 NEWSLIST.push(news);
                 resolve(news);

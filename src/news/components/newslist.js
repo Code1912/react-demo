@@ -1,12 +1,20 @@
 /**
  * Created by Z on 2017/3/14.
  */
-import  React from "react";
-
-class NewsList extends  React.Component{
+import  React, { Component } from "react";
+import {Service} from "../api/news";
+import {NewsActions} from "../actions/index"
+import {connect} from "react-redux";
+class NewsList extends  Component{
     constructor(props) {
         super(props);
+        this.getNews();
     }
+   getNews(){
+       Service.getNews().then(res=>{
+           this.props.dispatch(NewsActions.getAllNews(res));
+       })
+   }
     render(){
         return <div>
             <h2>Redux Demo</h2>
@@ -19,4 +27,11 @@ class NewsList extends  React.Component{
         </div>
     }
 }
-export  {   NewsList}
+function mapStateToProps(state){
+    return {
+        list: state.list
+    }
+}
+let NewsComponent=connect(mapStateToProps)(NewsList);
+export {NewsComponent};
+ //connect(mapStateToProps)(NewsList);
